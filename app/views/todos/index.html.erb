@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<%= render "new", todo: @todo %>
+
+<h1>Todos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Completed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody data-target="todos.todos">
+    <%= render @todos %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todo', new_todo_path %>
